@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-def run_pipeline():
+def run_pipeline(skip_training=False):
     print("Starting Data Science Pipeline: ")
     
     print("\nStep 1: Loading Data: ")
