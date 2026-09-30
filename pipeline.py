@@ -19,17 +19,22 @@ def run_pipeline():
     if result.returncode != 0:
         sys.exit(1)
         
-    print("\nStep 4: Model Training: ")
-    result = subprocess.run([sys.executable, "scripts/train.py"])
-    if result.returncode != 0:
-        sys.exit(1)
-        
-    print("\nStep 5: Model Evaluation: ")
-    result = subprocess.run([sys.executable, "scripts/evaluate.py"])
-    if result.returncode != 0:
-        sys.exit(1)
-        
+    if not skip_training:
+        print("\nStep 4: Model Training:")
+        result = subprocess.run([sys.executable, "scripts/train.py"])
+        if result.returncode != 0:
+            sys.exit(1)
+
+        print("\nStep 5: Model Evaluation:")
+        result = subprocess.run([sys.executable, "scripts/evaluate.py"])
+        if result.returncode != 0:
+            sys.exit(1)
+    else:
+        print("\nSkipping Model Training and Evaluation in CI.")
+
     print("\nPipeline Execution Completed Successfully!")
 
+
 if __name__ == "__main__":
-    run_pipeline()
+    skip_training = "--skip-training" in sys.argv
+    run_pipeline(skip_training=skip_training)
