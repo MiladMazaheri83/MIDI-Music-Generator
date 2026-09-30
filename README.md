@@ -112,4 +112,4 @@ The EDA phase (EDA.ipynb) acts as the mathematical validation for our model arch
 * **Style Separability:** Markov chain transitions for different composers visually prove that the stylistic features we extract create distinct, separable clusters for our Stage-1 model.
 
 ***
-*Developed for the University of Tehran, Spring 2026 - Data Science CA4*
+*Developed for the University of Tehran, Spring 2026 - Data Science*
