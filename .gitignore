@@ -1,0 +1,71 @@
+# ==========================================
+# 1. LaTeX & XeLaTeX Build Files
+# ==========================================
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.fls
+*.log
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bcf
+*.run.xml
+
+# ==========================================
+# 2. Python & Jupyter Notebooks
+# ==========================================
+# Cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments 
+venv/
+.venv
+
+# ==========================================
+# 3. Data Science Datasets (Optional but Recommended)
+# ==========================================
+*.dat
+*.sqlite
+*.db
+*.pkl
+
+# ==========================================
+# 4. OS & Editor Clutter
+# ==========================================
+# Windows & macOS garbage
+Thumbs.db
+.DS_Store
+
+# VS Code 
+.vscode
+.vscode/*
+!.vscode/settings.json
+
+
+# other
+data/
+report/
+kubectl/
+minikube-linux-amd64/
+*.yaml
+env/
+.env
